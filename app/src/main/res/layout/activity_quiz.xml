@@ -8,12 +8,14 @@
     android:padding="16dp">
 
     <TextView
+        android:textColor="#6165AC"
         android:id="@+id/textviewScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score : 0"/>
 
     <TextView
+        android:textColor="#6165AC"
         android:id="@+id/textviewQuestionCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,9 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Here will be the question text\n"
+        android:textStyle="bold"
         android:layout_above="@id/radioGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="100dp"
         android:textAlignment="center"
         android:textSize="18sp"/>
 
@@ -63,7 +66,8 @@
     </RadioGroup>
 
     <Button
-        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_bt"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/radioGroup"
         android:id="@+id/buttonConfirm"
         android:text="Confirm"

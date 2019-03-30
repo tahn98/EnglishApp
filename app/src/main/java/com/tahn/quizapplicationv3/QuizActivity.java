@@ -80,7 +80,7 @@ public class QuizActivity extends AppCompatActivity {
                     if(rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
                         checkAnswer();
                     }else{
-                        Toast.makeText(getApplicationContext(), "Please Select an Answer :", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Vui lòng chọn đáp án !", Toast.LENGTH_LONG).show();
                     }
                 }
                 else {
@@ -175,15 +175,15 @@ public class QuizActivity extends AppCompatActivity {
         switch (currentQuestion.getAnswerNr()){
             case 1:
                 rb1.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer A is correct");
+                textViewQuestion.setText("Đáp Án A Đúng");
                 break;
             case 2:
                 rb2.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer B is correct");
+                textViewQuestion.setText("Đáp Án B Đúng");
                 break;
             case 3:
                 rb3.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer B is correct");
+                textViewQuestion.setText("Đáp Án C Đúng");
                 break;
         }
 
@@ -207,7 +207,7 @@ public class QuizActivity extends AppCompatActivity {
         if(backPressTime + 2000 > System.currentTimeMillis()){
             finishQuiz();
         }else{
-            Toast.makeText(this, "Press back again to finish", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Bấm Back lần nữa để thoát nhé !", Toast.LENGTH_LONG).show();
         }
 
         backPressTime = System.currentTimeMillis();
