@@ -1,5 +1,6 @@
 package com.tahn.quizapplicationv3;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         switch (menuItem.getItemId()){
                             case R.id.quiz:
-                                break;
+                                callQuizActivity();
                             case R.id.grammar:
                                 break;
                         }
@@ -51,5 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void callQuizActivity(){
+        Intent intent = new Intent(MainActivity.this, QuizStartActivity.class);
+        startActivity(intent);
     }
 }
