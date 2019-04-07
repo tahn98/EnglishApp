@@ -64,10 +64,9 @@ public class HomeActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        Toast.makeText(HomeActivity.this, "vi tri 0", Toast.LENGTH_LONG).show();
+                        Intent articleIntent = new Intent(HomeActivity.this, ArticleActivity.class);
+                        startActivity(articleIntent);
                         break;
-                    case 1:
-                        Toast.makeText(HomeActivity.this, "vi tri 1", Toast.LENGTH_LONG).show();
                 }
             }
         });
