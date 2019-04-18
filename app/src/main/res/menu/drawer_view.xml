@@ -10,5 +10,9 @@
             android:id="@+id/quiz"
             android:title="Trả lời câu hỏi">
         </item>
+        <item
+            android:id="@+id/listen"
+            android:title="Luyện nghe">
+        </item>
     </group>
 </menu>

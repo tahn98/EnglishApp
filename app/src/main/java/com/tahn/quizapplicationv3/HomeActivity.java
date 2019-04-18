@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.tahn.quizapplicationv3.CustomAdapter.GrammarAdapter;
 import com.tahn.quizapplicationv3.objectClass.Grammar;
@@ -30,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        listView = findViewById(R.id.lvGrammar);
+        listView = findViewById(R.id.lstListen);
         ArrayList<Grammar> grammarArrayList = new ArrayList<>();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -41,6 +40,8 @@ public class HomeActivity extends AppCompatActivity {
                         switch (menuItem.getItemId()){
                             case R.id.quiz:
                                 callQuizActivity();
+                            case R.id.listen:
+                                callListenActivity();
                             case R.id.grammar:
                                 break;
                         }
@@ -84,6 +85,10 @@ public class HomeActivity extends AppCompatActivity {
 
     public void callQuizActivity(){
         Intent intent = new Intent(HomeActivity.this, QuizStartActivity.class);
+        startActivity(intent);
+    }
+    public void callListenActivity(){
+        Intent intent = new Intent(HomeActivity.this, ListenActivity.class);
         startActivity(intent);
     }
 }
