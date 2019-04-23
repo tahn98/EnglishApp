@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ArticleActivity"></activity>
+        <activity android:name=".NoteActivity"></activity>
+        <activity android:name=".ActivityanswersQ4" />
+        <activity android:name=".Q4Activity" />
+        <activity android:name=".QuizSelectActivity" />
+        <activity android:name=".ArticleActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +26,8 @@
         <activity android:name=".QuizStartActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".HomeActivity" />
+        <activity android:name=".AddItemActivity"/>
+
     </application>
 
 </manifest>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityanswersQ4"
+    android:padding="15dp">
+    <TextView
+        android:id="@+id/Q4score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:id="@+id/Q4count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question:1/x"
+        android:layout_below="@id/Q4score"/>
+    <TextView
+        android:id="@+id/Q4countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="0:30"
+        android:layout_alignParentEnd="true"
+        />
+    <RadioGroup
+        android:id="@+id/Q4radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <RadioButton
+            android:fontFamily="sans-serif-medium"
+            android:id="@+id/Q4A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A. option1"/>
+        <RadioButton
+            android:fontFamily="sans-serif-medium"
+            android:id="@+id/Q4B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B. option2"/>
+        <RadioButton
+            android:fontFamily="sans-serif-medium"
+            android:id="@+id/Q4C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C. option3"/>
+        <RadioButton
+            android:fontFamily="sans-serif-medium"
+            android:id="@+id/Q4D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D. option4"/>
+
+    </RadioGroup>
+    <TextView
+        android:fontFamily="sans-serif-black"
+        android:id="@+id/Q4question"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_above="@id/Q4radiogroup"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:textAlignment="center"
+        android:text="Here question\nHere question"
+        />
+    <Button
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:id="@+id/Q4confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Q4radiogroup"
+        android:layout_marginTop="15dp"
+        android:text="Confirm"
+        android:background="@drawable/custom_bt_red"
+        />
+
+</RelativeLayout>

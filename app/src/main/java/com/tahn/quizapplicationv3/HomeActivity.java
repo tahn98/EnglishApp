@@ -21,6 +21,7 @@ import com.tahn.quizapplicationv3.ConstructData.ConstructGrammar;
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
+
     private ListView listView;
     private DrawerLayout drawerLayout;
 
@@ -41,7 +42,13 @@ public class HomeActivity extends AppCompatActivity {
                         switch (menuItem.getItemId()){
                             case R.id.quiz:
                                 callQuizActivity();
+                                break;
                             case R.id.grammar:
+                                drawerLayout.closeDrawers();
+                                break;
+                            case R.id.note:
+                                Intent intent = new Intent(HomeActivity.this, NoteActivity.class);
+                                startActivity(intent);
                                 break;
                         }
                         return true;
@@ -55,16 +62,21 @@ public class HomeActivity extends AppCompatActivity {
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
         grammarArrayList = ConstructGrammar.returnArrayGrammarData();
-
         final GrammarAdapter grammarAdapter = new GrammarAdapter(this, grammarArrayList);
         listView.setAdapter(grammarAdapter);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent articleIntent = new Intent(HomeActivity.this, ArticleActivity.class);
                 switch (position){
                     case 0:
-                        Intent articleIntent = new Intent(HomeActivity.this, ArticleActivity.class);
+                        articleIntent.putExtra("Grammar_Case", "article");
+                        startActivity(articleIntent);
+                        break;
+                    case 1:
+                        articleIntent.putExtra("Grammar_Case", "hello");
                         startActivity(articleIntent);
                         break;
                 }
@@ -83,7 +95,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void callQuizActivity(){
-        Intent intent = new Intent(HomeActivity.this, QuizStartActivity.class);
+        Intent intent = new Intent(HomeActivity.this, QuizSelectActivity.class);
         startActivity(intent);
     }
 }

@@ -3,12 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:checkableBehavior="single">
         <item
+            android:icon="@drawable/ic_home_black_24dp"
             android:id="@+id/grammar"
             android:title="Học Ngữ Pháp">
         </item>
         <item
+            android:icon="@drawable/ic_question_answer_black_24dp"
             android:id="@+id/quiz"
             android:title="Trả lời câu hỏi">
+        </item>
+        <item
+            android:icon="@drawable/ic_note_black_24dp"
+            android:id="@+id/note"
+            android:title="Note!">
         </item>
     </group>
 </menu>

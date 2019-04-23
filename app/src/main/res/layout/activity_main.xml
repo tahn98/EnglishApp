@@ -32,7 +32,7 @@
             android:fontFamily="@font/ptsans"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
+            android:text="Hi!"
             android:textColor="#FFF"
             android:textSize="30sp" />
 
