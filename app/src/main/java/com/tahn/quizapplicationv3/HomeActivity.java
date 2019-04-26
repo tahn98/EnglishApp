@@ -72,13 +72,43 @@ public class HomeActivity extends AppCompatActivity {
                 Intent articleIntent = new Intent(HomeActivity.this, ArticleActivity.class);
                 switch (position){
                     case 0:
-                        articleIntent.putExtra("Grammar_Case", "article");
+                        articleIntent.putExtra("Grammar_Case", "modal");
                         startActivity(articleIntent);
                         break;
                     case 1:
-                        articleIntent.putExtra("Grammar_Case", "hello");
+                        articleIntent.putExtra("Grammar_Case", "passive");
                         startActivity(articleIntent);
                         break;
+                    case 2:
+                        articleIntent.putExtra("Grammar_Case", "imp");
+                        startActivity(articleIntent);
+                        break;
+                    case 3:
+                        articleIntent.putExtra("Grammar_Case", "inf_and_ge");
+                        startActivity(articleIntent);
+                        break;
+                    case 4:
+                        articleIntent.putExtra("Grammar_Case", "cond");
+                        startActivity(articleIntent);
+                        break;
+                    case 5:
+                        articleIntent.putExtra("Grammar_Case", "ifc");
+                        startActivity(articleIntent);
+                        break;
+                    case 6:
+                        articleIntent.putExtra("Grammar_Case", "timecl");
+                        startActivity(articleIntent);
+                        break;
+                    case 7:
+                        articleIntent.putExtra("Grammar_Case", "rel");
+                        startActivity(articleIntent);
+                        break;
+                    case 8:
+                        articleIntent.putExtra("Grammar_Case", "dio");
+                        startActivity(articleIntent);
+                    case 9:
+                        articleIntent.putExtra("Grammar_Case", "reps");
+                        startActivity(articleIntent);
                 }
             }
         });

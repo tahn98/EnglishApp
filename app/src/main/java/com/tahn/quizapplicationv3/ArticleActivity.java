@@ -23,16 +23,35 @@ public class ArticleActivity extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
         key = (String) bundle.get("Grammar_Case");
 
+        pdfView = findViewById(R.id.pdfArticles);
         switch (key){
-            case "article":
-                pdfView = findViewById(R.id.pdfArticles);
-                pdfView.fromAsset("articles.pdf").load();
+            case "modal":
+                pdfView.fromAsset("modal_verbs.pdf").load();
                 break;
-            case "hello":
-                Toast.makeText(this, "Hello", Toast.LENGTH_LONG).show();
+            case "passive":
+                pdfView.fromAsset("passive_voice.pdf").load();
+                break;
+            case "imp":
+                pdfView.fromAsset("imperative.pdf").load();
+                break;
+            case "inf_and_ge":
+                pdfView.fromAsset("infinitive_gerund.pdf").load();
+                break;
+            case "cond":
+                pdfView.fromAsset("conditional_tense.pdf").load();
+                break;
+            case "ifc":
+                pdfView.fromAsset("if.pdf").load();
+                break;
+            case "timecl":
+                pdfView.fromAsset("time_clause.pdf").load();
+                break;
+            case "rel":
+                pdfView.fromAsset("relative_clauses.pdf").load();
+                break;
+            case "reps":
+                pdfView.fromAsset("reported_speech.pdf").load();
                 break;
         }
-
-
     }
 }
