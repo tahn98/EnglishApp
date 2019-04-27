@@ -1,7 +1,10 @@
 package com.tahn.quizapplicationv3;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.tahn.quizapplicationv3.CustomAdapter.ListenAdapter;
@@ -26,5 +29,12 @@ public class ListenActivity extends AppCompatActivity {
         arrayListen.add(new Listen("Short Talk",R.drawable.conversation));
         adapter = new ListenAdapter(this,R.layout.listview_listen_custom,arrayListen);
         lvListen.setAdapter(adapter);
+        lvListen.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ListenActivity.this,ListenAudioActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
