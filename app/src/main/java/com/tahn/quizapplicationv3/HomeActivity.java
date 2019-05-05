@@ -20,6 +20,7 @@ import com.tahn.quizapplicationv3.ConstructData.ConstructGrammar;
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
+
     private ListView listView;
     private DrawerLayout drawerLayout;
 
@@ -40,9 +41,19 @@ public class HomeActivity extends AppCompatActivity {
                         switch (menuItem.getItemId()){
                             case R.id.quiz:
                                 callQuizActivity();
+                                break;
+
                             case R.id.listen:
                                 callListenActivity();
+                                break;
+
                             case R.id.grammar:
+                                drawerLayout.closeDrawers();
+                                break;
+
+                            case R.id.note:
+                                Intent intent = new Intent(HomeActivity.this, NoteActivity.class);
+                                startActivity(intent);
                                 break;
                         }
                         return true;
@@ -56,18 +67,53 @@ public class HomeActivity extends AppCompatActivity {
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
         grammarArrayList = ConstructGrammar.returnArrayGrammarData();
-
         final GrammarAdapter grammarAdapter = new GrammarAdapter(this, grammarArrayList);
         listView.setAdapter(grammarAdapter);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent articleIntent = new Intent(HomeActivity.this, ArticleActivity.class);
                 switch (position){
                     case 0:
-                        Intent articleIntent = new Intent(HomeActivity.this, ArticleActivity.class);
+                        articleIntent.putExtra("Grammar_Case", "modal");
                         startActivity(articleIntent);
                         break;
+                    case 1:
+                        articleIntent.putExtra("Grammar_Case", "passive");
+                        startActivity(articleIntent);
+                        break;
+                    case 2:
+                        articleIntent.putExtra("Grammar_Case", "imp");
+                        startActivity(articleIntent);
+                        break;
+                    case 3:
+                        articleIntent.putExtra("Grammar_Case", "inf_and_ge");
+                        startActivity(articleIntent);
+                        break;
+                    case 4:
+                        articleIntent.putExtra("Grammar_Case", "cond");
+                        startActivity(articleIntent);
+                        break;
+                    case 5:
+                        articleIntent.putExtra("Grammar_Case", "ifc");
+                        startActivity(articleIntent);
+                        break;
+                    case 6:
+                        articleIntent.putExtra("Grammar_Case", "timecl");
+                        startActivity(articleIntent);
+                        break;
+                    case 7:
+                        articleIntent.putExtra("Grammar_Case", "rel");
+                        startActivity(articleIntent);
+                        break;
+                    case 8:
+                        articleIntent.putExtra("Grammar_Case", "dio");
+                        startActivity(articleIntent);
+                    case 9:
+                        articleIntent.putExtra("Grammar_Case", "reps");
+                        startActivity(articleIntent);
                 }
             }
         });
@@ -84,7 +130,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void callQuizActivity(){
-        Intent intent = new Intent(HomeActivity.this, QuizStartActivity.class);
+        Intent intent = new Intent(HomeActivity.this, QuizSelectActivity.class);
         startActivity(intent);
     }
     public void callListenActivity(){

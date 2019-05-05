@@ -34,13 +34,13 @@
         android:id="@+id/textViewQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Here will be the question text\n"
-        android:textStyle="bold"
         android:layout_above="@id/radioGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="30dp"
+        android:text="Here will be the question text\n"
         android:textAlignment="center"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:layout_centerVertical="true"

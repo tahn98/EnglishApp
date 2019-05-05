@@ -33,7 +33,20 @@ public class ListenActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ListenActivity.this,ListenAudioActivity.class);
-                startActivity(intent);
+                switch (position){
+                    case 0:
+                        intent.putExtra("Listen_Case", "1");
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent.putExtra("Listen_Case", "2");
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent.putExtra("Listen_Case", "3");
+                        startActivity(intent);
+                        break;
+                }
             }
         });
     }
