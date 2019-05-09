@@ -2,11 +2,11 @@ package com.tahn.quizapplicationv3.objectClass;
 
 public class Listen {
     private String name;
-    private int imgId;
+    private int file;
 
-    public Listen(String name, int imgId) {
+    public Listen(String name, int file) {
         this.name = name;
-        this.imgId = imgId;
+        this.file = file;
     }
 
     public String getName() {
@@ -17,11 +17,11 @@ public class Listen {
         this.name = name;
     }
 
-    public int getImgId() {
-        return imgId;
+    public int getfile() {
+        return file;
     }
 
-    public void setImgId(int imgId) {
-        this.imgId = imgId;
+    public void setfile(int file) {
+        this.file = file;
     }
 }

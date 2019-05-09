@@ -45,10 +45,8 @@ public class ListenAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(layout,null);
         TextView txtName=(TextView) convertView.findViewById(R.id.txtName);
-        ImageView img=(ImageView) convertView.findViewById(R.id.imgView);
         Listen listen=listenArrayList.get(position);
         txtName.setText(listen.getName());
-        img.setImageResource(listen.getImgId());
         return convertView;
     }
 }
