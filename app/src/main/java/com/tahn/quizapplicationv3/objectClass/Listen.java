@@ -2,11 +2,13 @@ package com.tahn.quizapplicationv3.objectClass;
 
 public class Listen {
     private String name;
-    private int file;
+    private int fileAudio;
+    private int fileScript;
 
-    public Listen(String name, int file) {
+    public Listen(String name, int fileAudio, int fileScript) {
         this.name = name;
-        this.file = file;
+        this.fileAudio = fileAudio;
+        this.fileScript = fileScript;
     }
 
     public String getName() {
@@ -17,11 +19,19 @@ public class Listen {
         this.name = name;
     }
 
-    public int getfile() {
-        return file;
+    public int getFileAudio() {
+        return fileAudio;
     }
 
-    public void setfile(int file) {
-        this.file = file;
+    public void setFileAudio(int fileAudio) {
+        this.fileAudio = fileAudio;
+    }
+
+    public int getFileScript() {
+        return fileScript;
+    }
+
+    public void setFileScript(int fileScript) {
+        this.fileScript = fileScript;
     }
 }

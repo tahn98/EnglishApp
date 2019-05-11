@@ -44,7 +44,36 @@ public class ListenActivity extends AppCompatActivity {
                         intent.putExtra("Listen_Case", 2);
                         startActivity(intent);
                         break;
+                    case 3:
+                        intent.putExtra("Listen_Case", 3);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.putExtra("Listen_Case", 4);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.putExtra("Listen_Case", 5);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent.putExtra("Listen_Case", 6);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        intent.putExtra("Listen_Case", 7);
+                        startActivity(intent);
+                        break;
+                    case 8:
+                        intent.putExtra("Listen_Case", 8);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        intent.putExtra("Listen_Case", 9);
+                        startActivity(intent);
+                        break;
                 }
+
             }
         });
     }

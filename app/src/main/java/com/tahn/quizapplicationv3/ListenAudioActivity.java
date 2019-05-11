@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -18,6 +19,11 @@ import com.tahn.quizapplicationv3.objectClass.Listen;
 
 import org.w3c.dom.Text;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
@@ -26,8 +32,10 @@ public class ListenAudioActivity extends AppCompatActivity {
     MediaPlayer audio;
     SeekBar sbSong;
     ImageButton btnPlay;
-    TextView txtView,curTime,totalTime;
+    TextView txtView,curTime,totalTime,txtScript;
+    Button btnScript;
     ArrayList<Listen> arrayListen = new ArrayList<>();
+    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,13 +45,16 @@ public class ListenAudioActivity extends AppCompatActivity {
         txtView=(TextView) findViewById(R.id.txtView);
         curTime=(TextView)  findViewById(R.id.curTime);
         totalTime=(TextView) findViewById(R.id.totalTime);
+        txtScript=(TextView) findViewById(R.id.txtScript);
+        btnScript=(Button) findViewById(R.id.btnScript);
 
         arrayListen= ConstructListen.returnArrayListenData();
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         key = (int) bundle.get("Listen_Case");
         txtView.setText(arrayListen.get(key).getName());
-        audio = MediaPlayer.create(ListenAudioActivity.this,arrayListen.get(key).getfile());
+        audio = MediaPlayer.create(ListenAudioActivity.this,arrayListen.get(key).getFileAudio());
+
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +88,38 @@ public class ListenAudioActivity extends AppCompatActivity {
 
             }
         });
+//        InputStream inputStream = getResources().openRawResource(R.raw.school);
+        InputStream inputStream= getResources().openRawResource(arrayListen.get(key).getFileScript());
+
+        int i;
+        try {
+            i = inputStream.read();
+            while (i != -1)
+            {
+                byteArrayOutputStream.write(i);
+                i = inputStream.read();
+            }
+            inputStream.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        btnScript.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(txtScript.getText().toString()=="") {
+                    txtScript.setText(byteArrayOutputStream.toString());
+                    txtScript.setMovementMethod(new ScrollingMovementMethod());
+                }
+                else
+                {
+                    txtScript.setText("");
+                }
+            }
+        });
+
+
     }
     private void setTotalTime()
     {

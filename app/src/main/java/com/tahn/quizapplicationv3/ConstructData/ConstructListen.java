@@ -7,16 +7,16 @@ import java.util.Arrays;
 
 public class ConstructListen {
     private static ArrayList<Listen> listenArrayList = new ArrayList<>(
-            Arrays.asList(new Listen("A Day at School", R.raw.elem2),
-                    new Listen("Airport Arrival", R.raw.airportarrival),
-                    new Listen("Christmas is Coming!", R.raw.santa),
-                    new Listen("Answering Machine", R.raw.phone),
-                    new Listen("Camping under the Stars", R.raw.camp1),
-                    new Listen("First Date",R.raw.firstdate),
-                    new Listen("A Fun Day", R.raw.fun),
-                    new Listen("Happy Birthday!", R.raw.birthday),
-                    new Listen("New Year's Day", R.raw.newyear),
-                    new Listen("Nice to meet you", R.raw.childintro2))
+            Arrays.asList(new Listen("A Day at School", R.raw.elem2,R.raw.school),
+                    new Listen("Airport Arrival", R.raw.airportarrival,R.raw.airtxt),
+                    new Listen("Christmas is Coming!", R.raw.santa,R.raw.santatxt),
+                    new Listen("Answering Machine", R.raw.phone,R.raw.phonetxt),
+                    new Listen("Camping under the Stars", R.raw.camp1,R.raw.camptxt),
+                    new Listen("First Date",R.raw.firstdate,R.raw.firsttxt),
+                    new Listen("A Fun Day", R.raw.fun,R.raw.funtxt),
+                    new Listen("Happy Birthday!", R.raw.birthday,R.raw.birthdaytxt),
+                    new Listen("New Year's Day", R.raw.newyear,R.raw.newtxt),
+                    new Listen("Nice to meet you", R.raw.childintro,R.raw.childtxt))
     );
 
     public static ArrayList<Listen> returnArrayListenData(){
