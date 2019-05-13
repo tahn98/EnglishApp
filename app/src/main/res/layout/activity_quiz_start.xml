@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Score : 0"
+        android:layout_above="@id/buttonStartQuiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Large.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Funny Quiz"
+        android:textStyle="bold"
+        android:textColor="#6165AC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="35sp"/>
+
+    <Button
+        android:background="@drawable/custom_bt"
+        android:id="@+id/buttonStartQuiz"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Quiz"/>
+
+
+
+</RelativeLayout>
