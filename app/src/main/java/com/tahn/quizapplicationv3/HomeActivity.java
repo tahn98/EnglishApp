@@ -55,6 +55,11 @@ public class HomeActivity extends AppCompatActivity {
                                 Intent intent = new Intent(HomeActivity.this, NoteActivity.class);
                                 startActivity(intent);
                                 break;
+
+                            case R.id.vocab:
+                                Intent vocabIntent = new Intent(HomeActivity.this, SelectTopicActivity.class);
+                                startActivity(vocabIntent);
+                                break;
                         }
                         return true;
                     }

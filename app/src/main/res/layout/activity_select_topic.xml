@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="70"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_marginTop="20dp"
+            android:background="@drawable/x"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/backButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/questionLayout"
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/buttonAnimal"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/animal"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:textAlignment="center"
+            android:text="Động vật"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pictureLayout1"
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/buttonFruit"
+                android:layout_marginTop="15dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/fruit"/>
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textAlignment="center"
+                android:text="Trái cây"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="100px"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/buttonJob"
+                android:layout_marginTop="15dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/job"/>
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textAlignment="center"
+                android:text="Nghề nghiệp"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="100px"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="20"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/buttonFamily"
+                android:layout_marginTop="20dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/family"/>
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textAlignment="center"
+                android:text="Gia đình"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="100px"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/buttonZodiac"
+                android:layout_marginTop="20dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/aquarius"/>
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textAlignment="center"
+                android:text="Cung hoàng đạo"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="100px"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

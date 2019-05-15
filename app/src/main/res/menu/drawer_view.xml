@@ -22,5 +22,12 @@
             android:id="@+id/note"
             android:title="Note!">
         </item>
+        <item
+            android:icon="@drawable/ic_branding_watermark_black_24dp"
+            android:id="@+id/vocab"
+            android:title="Vocabulary">
+            >
+
+        </item>
     </group>
 </menu>
