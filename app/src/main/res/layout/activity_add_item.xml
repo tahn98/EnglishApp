@@ -17,14 +17,18 @@
     <TextView
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:text="Explanation"
+        android:text="Note Details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:background="@null"
+        android:gravity="top|left"
+        android:hint="Input detail ..."
+        android:inputType="textImeMultiLine"
         android:id="@+id/edtExplain"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="441dp" />
 
     <RelativeLayout
 
@@ -40,11 +44,5 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_check_black_24dp"
             android:tint="@android:color/white" />
-
-
     </RelativeLayout>
-
-
-
-
 </LinearLayout>

@@ -2,9 +2,9 @@ package com.tahn.quizapplicationv3;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,7 +31,7 @@ public class Q4Activity extends AppCompatActivity {
         });
     }
     private  void startquizQ4(){
-        Intent intent= new Intent(Q4Activity.this,ActivityanswersQ4.class);
+        Intent intent= new Intent(Q4Activity.this, ActivityanswersQ4.class);
         startActivityForResult(intent,REQUEST_CODE);
     }
 

@@ -13,6 +13,11 @@
             android:title="Trả lời câu hỏi">
         </item>
         <item
+            android:icon="@drawable/ic_audiotrack_black_24dp"
+            android:id="@+id/listen"
+            android:title="Luyện nghe">
+        </item>
+        <item
             android:icon="@drawable/ic_note_black_24dp"
             android:id="@+id/note"
             android:title="Note!">

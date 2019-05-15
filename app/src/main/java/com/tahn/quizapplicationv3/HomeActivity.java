@@ -1,22 +1,21 @@
 package com.tahn.quizapplicationv3;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
+import com.tahn.quizapplicationv3.ConstructData.ConstructGrammar;
 import com.tahn.quizapplicationv3.CustomAdapter.GrammarAdapter;
 import com.tahn.quizapplicationv3.objectClass.Grammar;
-import com.tahn.quizapplicationv3.ConstructData.ConstructGrammar;
 
 import java.util.ArrayList;
 
@@ -31,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        listView = findViewById(R.id.lvGrammar);
+        listView = findViewById(R.id.lstListen);
         ArrayList<Grammar> grammarArrayList = new ArrayList<>();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -43,9 +42,15 @@ public class HomeActivity extends AppCompatActivity {
                             case R.id.quiz:
                                 callQuizActivity();
                                 break;
+
+                            case R.id.listen:
+                                callListenActivity();
+                                break;
+
                             case R.id.grammar:
                                 drawerLayout.closeDrawers();
                                 break;
+
                             case R.id.note:
                                 Intent intent = new Intent(HomeActivity.this, NoteActivity.class);
                                 startActivity(intent);
@@ -126,6 +131,10 @@ public class HomeActivity extends AppCompatActivity {
 
     public void callQuizActivity(){
         Intent intent = new Intent(HomeActivity.this, QuizSelectActivity.class);
+        startActivity(intent);
+    }
+    public void callListenActivity(){
+        Intent intent = new Intent(HomeActivity.this, ListenActivity.class);
         startActivity(intent);
     }
 }

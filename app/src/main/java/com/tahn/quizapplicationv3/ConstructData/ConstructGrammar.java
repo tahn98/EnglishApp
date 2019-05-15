@@ -14,7 +14,7 @@ public class ConstructGrammar {
                     new Grammar("Imperative", R.drawable.imperative),
                     new Grammar("Infinity And Gerund", R.drawable.ig),
                     new Grammar("Conditional Tense", R.drawable.cdt),
-                    new Grammar("If Clause",R.drawable.ifcla),
+                    new Grammar("If Clause", R.drawable.ifcla),
                     new Grammar("Time Clause", R.drawable.timc),
                     new Grammar("Relative Clause", R.drawable.rel),
                     new Grammar("Direct - Indirect Object", R.drawable.dio),

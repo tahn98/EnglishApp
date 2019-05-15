@@ -17,7 +17,7 @@
         android:text="TOEIC Grammar Test"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#F44336" />
+        android:textColor="#1832A2" />
 
     <TextView
         android:layout_gravity="center"
@@ -28,6 +28,7 @@
         android:text="Best Score: 0" />
 
     <Button
+        android:textColor="#ffffff"
         android:id="@+id/Q4start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
